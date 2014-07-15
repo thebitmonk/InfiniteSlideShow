@@ -1,4 +1,4 @@
-# APIClient
+# InfiniteSlidShow
 
 ## Installation
 
@@ -22,6 +22,7 @@ A custom UIView which lets you do infinite slideshow of images. Various options 
 	 [self.slideShow setUpView];
 
 Refer Example project to have a deeper look at the usage. In order to run example project you shall have to do:
+	
 	pod install
 
 After this simply open Example.xcworkspace and build the project
@@ -32,4 +33,4 @@ Varun Jain, varunjain003@gmail.com
 
 ## License
 
-APIClient is available under the MIT license. See the LICENSE file for more info.
+InfiniteSlideShow is available under the MIT license. See the LICENSE file for more info.

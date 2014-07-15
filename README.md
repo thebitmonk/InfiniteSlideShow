@@ -11,9 +11,9 @@ it simply add the following line to your Podfile:
 
 A custom UIView which lets you do infinite slideshow of images. Various options are provided: (A) custom timer for triggering next slide (B) Sliding based on user swipe gestures (C) Showing extra information corresponding to currently displayed image (D) Custom slider dots
 
-![Alt text](https://github.com/thebitmonk/InfiniteSlideShow/blob/master/ScreenShots/1.png "")
+![Alt text](https://raw.githubusercontent.com/thebitmonk/InfiniteSlideShow/master/ScreenShots/1.png "")
 
-![Alt text](https://github.com/thebitmonk/InfiniteSlideShow/blob/master/ScreenShots/2.png "")
+![Alt text](https://raw.githubusercontent.com/thebitmonk/InfiniteSlideShow/master/ScreenShots/2.png "")
 
 ## Usage
 	 self.slideShow = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];

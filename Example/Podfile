@@ -1,0 +1,12 @@
+inhibit_all_warnings!
+
+pod "SDWebImage", "~> 3.5.4"
+
+target "Example", exclusive: true do
+  xcodeproj 'Example.xcodeproj'
+  workspace 'Example.xcworkspace'
+  pod "InfiniteSlideShow", path: "../"
+end
+
+
+

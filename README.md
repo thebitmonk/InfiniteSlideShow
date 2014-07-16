@@ -33,26 +33,27 @@ InfiniteSlideShow comprises of two separate UI Components:
 
 **Basic Usage**
 
-	 self.slideShow = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-	 self.slideShow.dataSource = self;
-	 self.slideShow.delegate = self;
-	 [self.slideShow setUpView];
+	self.slideShow = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+	self.slideShow.dataSource = self;
+	self.slideShow.delegate = self;
+	[self.slideShow setUpView];
 
 **Advanced Usage**
-    slideShowWithCustomControl = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200)];
-    slideShowWithCustomControl.dataSource = self;
-    slideShowWithCustomControl.delegate = self;
-    
-    pageControl = [[CustomPageControl alloc] init];
-    pageControl.hidesForSinglePage = YES;
-    [pageControl setNumberOfPages:[dataArray count]] ;
-    [pageControl setCurrentPage:0];
-    [pageControl setOnImage:[UIImage imageNamed:@"dot_on"]];
-    [pageControl setOffImage:[UIImage imageNamed:@"dot_off"]];
-    [pageControl setIndicatorDiameter: 10.0f];
-    [pageControl setIndicatorSpace:7.0f];
-    
-    [slideShowWithCustomControl setUpViewWithTimerDuration:[NSNumber numberWithFloat:3.0]
+	
+	slideShowWithCustomControl = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200)];
+	slideShowWithCustomControl.dataSource = self;
+	slideShowWithCustomControl.delegate = self;
+
+	pageControl = [[CustomPageControl alloc] init];
+	pageControl.hidesForSinglePage = YES;
+	[pageControl setNumberOfPages:[dataArray count]] ;
+	[pageControl setCurrentPage:0];
+	[pageControl setOnImage:[UIImage imageNamed:@"dot_on"]];
+	[pageControl setOffImage:[UIImage imageNamed:@"dot_off"]];
+	[pageControl setIndicatorDiameter: 10.0f];
+	[pageControl setIndicatorSpace:7.0f];
+
+	[slideShowWithCustomControl setUpViewWithTimerDuration:[NSNumber numberWithFloat:3.0]
                              animationDuration:[NSNumber numberWithFloat:1.0]
                              customPageControl:pageControl];
 

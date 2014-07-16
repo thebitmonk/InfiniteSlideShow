@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "InfiniteSlideShowDatasource.h"
 #import "InfiniteSlideShowDelegate.h"
+#import "CustomPageControl.h"
 
 @interface InfiniteSlideShow : UIView<
                                     UIScrollViewDelegate,
@@ -18,7 +19,10 @@
 @property (nonatomic, weak) id<InfiniteSlideShowDatasource> dataSource;
 @property (nonatomic, weak) id<InfiniteSlideShowDelegate> delegate;
 
--(void)setUpView;
+-(void)setUpViewWithTimerDuration:(NSNumber *)timerDuration
+                animationDuration:(NSNumber *)animationDuration
+                customPageControl:(CustomPageControl *)pageControl;
+
 -(void)killTimer;
 
 @end

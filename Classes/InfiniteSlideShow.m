@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #define ANIMATION_DURATION 0.5
+#define TIMER_DURATION 3.0
 
 @interface InfiniteSlideShow()
 {
@@ -20,6 +21,8 @@
     NSTimer *timer;
     NSArray *dataArray;
     NSMutableArray *imageViews;
+    float timerDuration;
+    float animationDuration;
 }
 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -27,14 +30,12 @@
 
 - (void)addGestureRecognizers;
 - (void)setUpScrollView;
-- (void)handlePan:(UIPanGestureRecognizer *)recognizer;
 - (void)scrollingTimerWithDirectionLeft;
 - (void)scrollingTimerWithDirectionRight;
-- (void)setDefaultImages;
 - (void)addTapGestureRecognizer;
 - (void)resetSlideShowTimer;
--(void)handleLeftSwipe:(UISwipeGestureRecognizer *)recognizer;
--(void)handleRightSwipe:(UISwipeGestureRecognizer *)recognizer;
+- (void)handleLeftSwipe:(UISwipeGestureRecognizer *)recognizer;
+- (void)handleRightSwipe:(UISwipeGestureRecognizer *)recognizer;
 
 @end
 
@@ -50,13 +51,17 @@
     return self;
 }
 
-- (void)setUpView
+-(void)setUpViewWithTimerDuration:(NSNumber *)slideTimerDuration
+                animationDuration:(NSNumber *)slideAnimationDuration
+                customPageControl:(CustomPageControl *)slidePageControl
 {
     dataArray = [self.dataSource loadSlideShowItems];
     
     totalElements = [dataArray count];
     imageViews = [[NSMutableArray alloc] init];
-
+    timerDuration = [slideTimerDuration floatValue] || TIMER_DURATION;
+    animationDuration = [slideAnimationDuration floatValue]|| ANIMATION_DURATION;
+    
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
     [self.scrollView setDelegate:self];
     [self.scrollView setAutoresizesSubviews:UIViewAutoresizingNone];
@@ -68,21 +73,32 @@
     currentPage = 0;
 
     // Setting up custom page control
-	self.pageControl = [[CustomPageControl alloc] init] ;
-    self.pageControl.hidesForSinglePage = YES;
-	[self.pageControl setCenter: CGPointMake(self.center.x, self.frame.size.height - 20)] ;
-	[self.pageControl setNumberOfPages: totalElements] ;
-	[self.pageControl setCurrentPage: 0] ;
-    [self.pageControl setOnImage:[UIImage imageNamed:@"dot_on"]];
-	[self.pageControl setOffImage:[UIImage imageNamed:@"dot_off"]];
-	[self.pageControl setIndicatorDiameter: 5.0f] ;
-	[self.pageControl setIndicatorSpace: 6.0f] ;
-	[self addSubview: self.pageControl] ;
+    if (!slidePageControl)
+    {
+        self.pageControl = [[CustomPageControl alloc] init];
+        self.pageControl.hidesForSinglePage = YES;
+        [self.pageControl setNumberOfPages: totalElements] ;
+        [self.pageControl setCurrentPage: 0];
+        [self.pageControl setOnImage:[UIImage imageNamed:@"dot_on"]];
+        [self.pageControl setOffImage:[UIImage imageNamed:@"dot_off"]];
+        [self.pageControl setIndicatorDiameter:5.0f];
+        [self.pageControl setIndicatorSpace: 6.0f];
+    }
+    else
+    {
+        self.pageControl = slidePageControl;
+    }
     
+    [self.pageControl setCenter: CGPointMake(self.frame.origin.x + self.center.x, self.frame.origin.y + self.frame.size.height - 20)];
+    [self addSubview:self.pageControl];
     [self addGestureRecognizers];
     
     // Setting up TimeInterval
-    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(scrollingTimerWithDirectionRight) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:timerDuration
+                                             target:self
+                                           selector:@selector(scrollingTimerWithDirectionRight)
+                                           userInfo:nil
+                                            repeats:YES];
 }
 
 
@@ -225,7 +241,6 @@
 {
     if (animationInProcess)
     {
-        NSLog(@"animation in process");
         return;
     }
     

@@ -10,17 +10,16 @@
 
 @interface CustomPageControl : UIControl
 
+@property (nonatomic) BOOL hidesForSinglePage;
 @property (nonatomic, assign) NSInteger currentPage;
 @property (nonatomic, assign) NSInteger numberOfPages;
-
-@property (nonatomic) BOOL hidesForSinglePage;
-
-- (void)updateCurrentPageDisplay;
-- (CGSize)sizeForNumberOfPages:(NSInteger)pages;
-
 @property (nonatomic, strong) UIImage *onImage;
 @property (nonatomic, strong) UIImage *offImage;
 @property (nonatomic) CGFloat indicatorDiameter;
 @property (nonatomic) CGFloat indicatorSpace;
+
+- (void)updateCurrentPageDisplay;
+- (CGSize)sizeForNumberOfPages:(NSInteger)pages;
+
 
 @end

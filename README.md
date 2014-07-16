@@ -11,16 +11,18 @@ it simply add the following line to your Podfile:
 InfiniteSlideShow comprises of two separate UI Components:
 
 **CustomPageControl** (CustomControl): A custom UIControl (dots signifying current slide) for InfiniteSlideShow View. Various options are provided:
-	* Number of dots to be set based on datasource	
-	* Set diameter / spacing for the dots	
-	* Set custom on / off image
+
+	+ Number of dots to be set based on datasource	
+	+ Set diameter / spacing for the dots	
+	+ Set custom on / off image
 
 
 **InfiniteSlideShow** (UIView) :A custom UIView which lets you do infinite slideshow of images. Various options are provided: 	
-	* Custom time duration for triggering next slide
-	* Custom time duration for animation
-	* Fetching images over the network
-	* Custom Page Control
+	
+	+ Custom time duration for triggering next slide
+	+ Custom time duration for animation
+	+ Fetching images over the network
+	+ Custom Page Control
  
 ![Alt text](https://raw.githubusercontent.com/thebitmonk/InfiniteSlideShow/master/ScreenShots/1.png "")
 

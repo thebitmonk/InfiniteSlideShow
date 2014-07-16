@@ -62,7 +62,7 @@
     timerDuration = [slideTimerDuration floatValue] || TIMER_DURATION;
     animationDuration = [slideAnimationDuration floatValue]|| ANIMATION_DURATION;
     
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self.scrollView setDelegate:self];
     [self.scrollView setAutoresizesSubviews:UIViewAutoresizingNone];
     [self.scrollView setScrollEnabled:FALSE];
@@ -89,7 +89,7 @@
         self.pageControl = slidePageControl;
     }
     
-    [self.pageControl setCenter: CGPointMake(self.frame.origin.x + self.center.x, self.frame.origin.y + self.frame.size.height - 20)];
+    [self.pageControl setCenter: CGPointMake(self.center.x, self.frame.size.height - 20)];
     [self addSubview:self.pageControl];
     [self addGestureRecognizers];
     
@@ -111,20 +111,26 @@
 - (void)resetSlideShowTimer
 {
     [self killTimer];
-    timer = [NSTimer scheduledTimerWithTimeInterval:6 target:self selector:@selector(scrollingTimerWithDirectionRight) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:timerDuration
+                                             target:self
+                                           selector:@selector(scrollingTimerWithDirectionRight)
+                                           userInfo:nil
+                                            repeats:YES];
 }
 
 - (void)addGestureRecognizers
 {
     // Adding left swipe
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                    action:@selector(handleLeftSwipe:)];
     [leftSwipe setDirection:(UISwipeGestureRecognizerDirectionRight)];
     [self addGestureRecognizer:leftSwipe];
     leftSwipe.delegate = self;
     leftSwipe.numberOfTouchesRequired = 1;
     
     // Adding right swipe
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                     action:@selector(handleRightSwipe:)];
     [rightSwipe setDirection:(UISwipeGestureRecognizerDirectionLeft)];
     [self addGestureRecognizer:rightSwipe];
     rightSwipe.delegate = self;
@@ -228,7 +234,7 @@
     
     self.pageControl.currentPage = currentPage;
     
-    [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+    [UIView animateWithDuration:animationDuration animations:^{
         [self.scrollView setContentOffset:CGPointMake((currentPage + 1)*self.scrollView.frame.size.width, 0)];
     }
     completion:^(BOOL finished){
@@ -255,7 +261,7 @@
 
     self.pageControl.currentPage = currentPage;
     
-    [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+    [UIView animateWithDuration:animationDuration animations:^{
         [self.scrollView setContentOffset:CGPointMake((currentPage + 1)*self.scrollView.frame.size.width, 0)];
     }
     completion:^(BOOL finished){
@@ -266,8 +272,9 @@
 
 - (void)tapDetected:(UITapGestureRecognizer *)sender
 {
+    NSLog(@"Hey you just tapped an image");
     UIImageView *imageView = (UIImageView *)sender.view;
-    int tag = imageView.tag;
+    NSInteger tag = imageView.tag;
     if (tag == 0)
     {
         tag = totalElements;

@@ -40,7 +40,7 @@
                 @"http://www.walldesk.net/pdp/1024/13/02/Great-Voyage.jpg"];
     
     // Default Slideshow
-    /**
+    
     slideShow = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     slideShow.dataSource = self;
     slideShow.delegate = self;
@@ -48,10 +48,10 @@
                              animationDuration:nil
                              customPageControl:nil];
     [self.view addSubview:slideShow];
-    **/
+    
     
     // Slideshow with custom animation / timer and custom page control
-    slideShowWithCustomControl = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200)];
+    slideShowWithCustomControl = [[InfiniteSlideShow alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 200)];
     slideShowWithCustomControl.dataSource = self;
     slideShowWithCustomControl.delegate = self;
     
@@ -63,10 +63,11 @@
     [pageControl setOffImage:[UIImage imageNamed:@"dot_off"]];
     [pageControl setIndicatorDiameter: 10.0f];
     [pageControl setIndicatorSpace:7.0f];
+    [slideShowWithCustomControl setBackgroundColor:[UIColor redColor]];
     
-    [slideShowWithCustomControl setUpViewWithTimerDuration:[NSNumber numberWithFloat:3.0]
-                             animationDuration:[NSNumber numberWithFloat:1.0]
-                             customPageControl:pageControl];
+    [slideShowWithCustomControl setUpViewWithTimerDuration:[NSNumber numberWithFloat:5.0]
+                                         animationDuration:[NSNumber numberWithFloat:0.2]
+                                         customPageControl:pageControl];
     
     [self.view addSubview:slideShowWithCustomControl];
     

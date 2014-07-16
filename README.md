@@ -23,6 +23,7 @@ InfiniteSlideShow comprises of two separate UI Components:
 	+ Custom time duration for animation
 	+ Fetching images over the network
 	+ Custom Page Control
+	+ Sliding based on user swipes
  
 ![Alt text](https://raw.githubusercontent.com/thebitmonk/InfiniteSlideShow/master/ScreenShots/1.png "")
 

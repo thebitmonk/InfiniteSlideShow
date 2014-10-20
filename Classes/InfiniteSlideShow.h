@@ -25,4 +25,8 @@
 
 -(void)killTimer;
 
+-(void)reload;
+
+-(void)resetSlideShowTimer;
+
 @end

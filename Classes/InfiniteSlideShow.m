@@ -101,6 +101,30 @@
                                             repeats:YES];
 }
 
+- (void) reload
+{
+    [self killTimer];
+    
+    animationInProcess = FALSE;
+    
+    currentPage = 0;
+    
+    [imageViews removeAllObjects];
+
+    dataArray = [self.dataSource loadSlideShowItems];
+    totalElements = [dataArray count];
+    
+    [self.pageControl setNumberOfPages: totalElements] ;
+    [self.pageControl setCurrentPage: 0];
+    [self setUpScrollView];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:timerDuration
+                                             target:self
+                                           selector:@selector(scrollingTimerWithDirectionRight)
+                                           userInfo:nil
+                                            repeats:YES];
+}
+
 
 - (void)killTimer
 {

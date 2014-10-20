@@ -213,7 +213,7 @@
         }
         
         imageView = (UIImageView *)imageViews[i];
-        [imageView setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
     }
 }
 

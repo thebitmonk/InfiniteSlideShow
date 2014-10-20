@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8279E627BE224FBBAD67441C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 758340448F12470A922AB573 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		8785B4A6DCCF052A6EDD1F47 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DBA029AB2B46ADA51AA64E /* libPods-Example.a */; };
 		FAA170941975D79C0011DF08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170931975D79C0011DF08 /* Foundation.framework */; };
 		FAA170961975D79D0011DF08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170951975D79D0011DF08 /* CoreGraphics.framework */; };
 		FAA170981975D79D0011DF08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170971975D79D0011DF08 /* UIKit.framework */; };
@@ -17,30 +18,15 @@
 		FAA170A71975D79D0011DF08 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA170A51975D79D0011DF08 /* Main_iPhone.storyboard */; };
 		FAA170AA1975D79D0011DF08 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA170A81975D79D0011DF08 /* Main_iPad.storyboard */; };
 		FAA170AF1975D79D0011DF08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA170AE1975D79D0011DF08 /* Images.xcassets */; };
-		FAA170B61975D79D0011DF08 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170B51975D79D0011DF08 /* XCTest.framework */; };
-		FAA170B71975D79D0011DF08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170931975D79C0011DF08 /* Foundation.framework */; };
-		FAA170B81975D79D0011DF08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170971975D79D0011DF08 /* UIKit.framework */; };
-		FAA170C01975D79D0011DF08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAA170BE1975D79D0011DF08 /* InfoPlist.strings */; };
-		FAA170C21975D79D0011DF08 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA170C11975D79D0011DF08 /* ExampleTests.m */; };
 		FAA170CD1975D7EE0011DF08 /* ExampleControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA170CC1975D7EE0011DF08 /* ExampleControllerViewController.m */; };
 		FAA170CF1975DA3E0011DF08 /* libPods-Example-InfiniteSlideShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA170CE1975DA3E0011DF08 /* libPods-Example-InfiniteSlideShow.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FAA170B91975D79D0011DF08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAA170881975D79C0011DF08 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAA1708F1975D79C0011DF08;
-			remoteInfo = Example;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0B0D0631E41D4E59B97BD037 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		3B3E118F4E144A918446786E /* Pods-Example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.xcconfig"; path = "Pods/Pods-Example.xcconfig"; sourceTree = "<group>"; };
 		758340448F12470A922AB573 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DBA029AB2B46ADA51AA64E /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80732836EDC10C331E7F2C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F815C8BA58A98FFE96D6F8E5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FAA170901975D79C0011DF08 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA170931975D79C0011DF08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FAA170951975D79D0011DF08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,11 +40,7 @@
 		FAA170A61975D79D0011DF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		FAA170A91975D79D0011DF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		FAA170AE1975D79D0011DF08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FAA170B41975D79D0011DF08 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA170B51975D79D0011DF08 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		FAA170BD1975D79D0011DF08 /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
-		FAA170BF1975D79D0011DF08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FAA170C11975D79D0011DF08 /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		FAA170CB1975D7EE0011DF08 /* ExampleControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleControllerViewController.h; sourceTree = "<group>"; };
 		FAA170CC1975D7EE0011DF08 /* ExampleControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleControllerViewController.m; sourceTree = "<group>"; };
 		FAA170CE1975DA3E0011DF08 /* libPods-Example-InfiniteSlideShow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Example-InfiniteSlideShow.a"; path = "Pods/build/Release-iphoneos/libPods-Example-InfiniteSlideShow.a"; sourceTree = "<group>"; };
@@ -74,31 +56,29 @@
 				FAA170981975D79D0011DF08 /* UIKit.framework in Frameworks */,
 				FAA170941975D79C0011DF08 /* Foundation.framework in Frameworks */,
 				8279E627BE224FBBAD67441C /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAA170B11975D79D0011DF08 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAA170B61975D79D0011DF08 /* XCTest.framework in Frameworks */,
-				FAA170B81975D79D0011DF08 /* UIKit.framework in Frameworks */,
-				FAA170B71975D79D0011DF08 /* Foundation.framework in Frameworks */,
+				8785B4A6DCCF052A6EDD1F47 /* libPods-Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8948A41A2F0823C02C7E3A5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D80732836EDC10C331E7F2C3 /* Pods.debug.xcconfig */,
+				F815C8BA58A98FFE96D6F8E5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FAA170871975D79C0011DF08 = {
 			isa = PBXGroup;
 			children = (
 				FAA170991975D79D0011DF08 /* Example */,
-				FAA170BB1975D79D0011DF08 /* ExampleTests */,
 				FAA170921975D79C0011DF08 /* Frameworks */,
 				FAA170911975D79C0011DF08 /* Products */,
-				0B0D0631E41D4E59B97BD037 /* Pods.xcconfig */,
-				3B3E118F4E144A918446786E /* Pods-Example.xcconfig */,
+				8948A41A2F0823C02C7E3A5D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				FAA170901975D79C0011DF08 /* Example.app */,
-				FAA170B41975D79D0011DF08 /* ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,24 +130,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FAA170BB1975D79D0011DF08 /* ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				FAA170C11975D79D0011DF08 /* ExampleTests.m */,
-				FAA170BC1975D79D0011DF08 /* Supporting Files */,
-			);
-			path = ExampleTests;
-			sourceTree = "<group>";
-		};
-		FAA170BC1975D79D0011DF08 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FAA170BD1975D79D0011DF08 /* ExampleTests-Info.plist */,
-				FAA170BE1975D79D0011DF08 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,24 +152,6 @@
 			productReference = FAA170901975D79C0011DF08 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FAA170B31975D79D0011DF08 /* ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FAA170C81975D79D0011DF08 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
-			buildPhases = (
-				FAA170B01975D79D0011DF08 /* Sources */,
-				FAA170B11975D79D0011DF08 /* Frameworks */,
-				FAA170B21975D79D0011DF08 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FAA170BA1975D79D0011DF08 /* PBXTargetDependency */,
-			);
-			name = ExampleTests;
-			productName = ExampleTests;
-			productReference = FAA170B41975D79D0011DF08 /* ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,11 +160,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Varun Jain";
-				TargetAttributes = {
-					FAA170B31975D79D0011DF08 = {
-						TestTargetID = FAA1708F1975D79C0011DF08;
-					};
-				};
 			};
 			buildConfigurationList = FAA1708B1975D79C0011DF08 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -237,7 +175,6 @@
 			projectRoot = "";
 			targets = (
 				FAA1708F1975D79C0011DF08 /* Example */,
-				FAA170B31975D79D0011DF08 /* ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,14 +188,6 @@
 				FAA170AF1975D79D0011DF08 /* Images.xcassets in Resources */,
 				FAA170A71975D79D0011DF08 /* Main_iPhone.storyboard in Resources */,
 				FAA1709E1975D79D0011DF08 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAA170B21975D79D0011DF08 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAA170C01975D79D0011DF08 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +206,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C503C28CE45B47C5A78D59F1 /* Check Pods Manifest.lock */ = {
@@ -308,23 +237,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAA170B01975D79D0011DF08 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAA170C21975D79D0011DF08 /* ExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FAA170BA1975D79D0011DF08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAA1708F1975D79C0011DF08 /* Example */;
-			targetProxy = FAA170B91975D79D0011DF08 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FAA1709C1975D79D0011DF08 /* InfoPlist.strings */ = {
@@ -349,14 +262,6 @@
 				FAA170A91975D79D0011DF08 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		FAA170BE1975D79D0011DF08 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAA170BF1975D79D0011DF08 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,7 +341,7 @@
 		};
 		FAA170C61975D79D0011DF08 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B3E118F4E144A918446786E /* Pods-Example.xcconfig */;
+			baseConfigurationReference = D80732836EDC10C331E7F2C3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -454,7 +359,7 @@
 		};
 		FAA170C71975D79D0011DF08 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B3E118F4E144A918446786E /* Pods-Example.xcconfig */;
+			baseConfigurationReference = F815C8BA58A98FFE96D6F8E5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -467,46 +372,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		FAA170C91975D79D0011DF08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ExampleTests/ExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		FAA170CA1975D79D0011DF08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
-				INFOPLIST_FILE = "ExampleTests/ExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -527,15 +392,6 @@
 			buildConfigurations = (
 				FAA170C61975D79D0011DF08 /* Debug */,
 				FAA170C71975D79D0011DF08 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FAA170C81975D79D0011DF08 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAA170C91975D79D0011DF08 /* Debug */,
-				FAA170CA1975D79D0011DF08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

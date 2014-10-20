@@ -10,29 +10,29 @@
 	<string>Example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F11D5BDE-C9A4-4532-B265-92C011E8802C</key>
+		<key>291BD0FA6C7BC645FF2B3D96984B6FB793CC7E16</key>
 		<string>ssh://github.com/thebitmonk/InfiniteSlideShow.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Example/Example.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F11D5BDE-C9A4-4532-B265-92C011E8802C</key>
+		<key>291BD0FA6C7BC645FF2B3D96984B6FB793CC7E16</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/thebitmonk/InfiniteSlideShow.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F11D5BDE-C9A4-4532-B265-92C011E8802C</string>
+	<string>291BD0FA6C7BC645FF2B3D96984B6FB793CC7E16</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F11D5BDE-C9A4-4532-B265-92C011E8802C</string>
+			<string>291BD0FA6C7BC645FF2B3D96984B6FB793CC7E16</string>
 			<key>IDESourceControlWCCName</key>
 			<string>InfiniteSlideShow</string>
 		</dict>

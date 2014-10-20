@@ -197,7 +197,7 @@
 {
     UIImageView *imageView = nil;
     NSString *imageUrl;
-    for (int i=0; i< [imageViews count]; i++)
+    for (int i=0; totalElements && i< [imageViews count]; i++)
     {
         if (i == 0)
         {

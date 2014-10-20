@@ -59,8 +59,8 @@
     
     totalElements = [dataArray count];
     imageViews = [[NSMutableArray alloc] init];
-    timerDuration = [slideTimerDuration floatValue] || TIMER_DURATION;
-    animationDuration = [slideAnimationDuration floatValue]|| ANIMATION_DURATION;
+    timerDuration = [slideTimerDuration floatValue] == 0 ? TIMER_DURATION : [slideTimerDuration floatValue];
+    animationDuration = [slideAnimationDuration floatValue] == 0 ? ANIMATION_DURATION : [slideAnimationDuration floatValue];
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self.scrollView setDelegate:self];

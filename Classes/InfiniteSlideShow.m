@@ -59,8 +59,8 @@
     
     totalElements = [dataArray count];
     imageViews = [[NSMutableArray alloc] init];
-    timerDuration = [slideTimerDuration floatValue] || TIMER_DURATION;
-    animationDuration = [slideAnimationDuration floatValue]|| ANIMATION_DURATION;
+    timerDuration = [slideTimerDuration floatValue] == 0 ? TIMER_DURATION : [slideTimerDuration floatValue];
+    animationDuration = [slideAnimationDuration floatValue] == 0 ? ANIMATION_DURATION : [slideAnimationDuration floatValue];
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self.scrollView setDelegate:self];
@@ -94,6 +94,30 @@
     [self addGestureRecognizers];
     
     // Setting up TimeInterval
+    timer = [NSTimer scheduledTimerWithTimeInterval:timerDuration
+                                             target:self
+                                           selector:@selector(scrollingTimerWithDirectionRight)
+                                           userInfo:nil
+                                            repeats:YES];
+}
+
+- (void) reload
+{
+    [self killTimer];
+    
+    animationInProcess = FALSE;
+    
+    currentPage = 0;
+    
+    [imageViews removeAllObjects];
+
+    dataArray = [self.dataSource loadSlideShowItems];
+    totalElements = [dataArray count];
+    
+    [self.pageControl setNumberOfPages: totalElements] ;
+    [self.pageControl setCurrentPage: 0];
+    [self setUpScrollView];
+    
     timer = [NSTimer scheduledTimerWithTimeInterval:timerDuration
                                              target:self
                                            selector:@selector(scrollingTimerWithDirectionRight)
@@ -197,7 +221,7 @@
 {
     UIImageView *imageView = nil;
     NSString *imageUrl;
-    for (int i=0; i< [imageViews count]; i++)
+    for (int i=0; totalElements && i< [imageViews count]; i++)
     {
         if (i == 0)
         {
@@ -213,7 +237,7 @@
         }
         
         imageView = (UIImageView *)imageViews[i];
-        [imageView setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
     }
 }
 
